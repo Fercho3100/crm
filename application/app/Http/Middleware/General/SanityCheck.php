@@ -1,6 +1,6 @@
 <?php
 /** ----------------------------------------------------------------------------------------
- *  [NEXTLOOP][SANITY CHECK SERVICE PROVIDER]
+ *  [Fernando Aguilar Madriz- Jeffrey S.S-Derian][SANITY CHECK SERVICE PROVIDER]
  *
  *  - Validate arrays that are in the settings file
  *  -Checks if setup has been completed. If not, user is redirected to setup

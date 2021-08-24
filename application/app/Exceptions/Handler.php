@@ -48,7 +48,7 @@ class Handler extends ExceptionHandler {
      */
     /**
      * Render an exception into an HTTP response.
-     * [NEXTLOOP] modified render method
+     * [Fernando Aguilar Madriz- Jeffrey S.S-Derian] modified render method
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $exception

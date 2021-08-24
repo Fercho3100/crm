@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This repository class manages all writing to the .env file
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Repositories;

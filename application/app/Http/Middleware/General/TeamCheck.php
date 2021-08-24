@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This middleware class handles [team user validation] precheck processes
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Middleware\General;

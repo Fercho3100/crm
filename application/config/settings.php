@@ -348,7 +348,7 @@ return [
     'notification_success_duration' => 3000,
 
     /** ---------------------------------------------------POST RELEASE CHANGES-------------------------------------------------------- /
-     * The following changes are not automatically included in any version of Grow CRM. The user must add them, if they need them
+     * The following changes are not automatically included in any version of CRM. The user must add them, if they need them
      * as per any documenation provided
      * [BNS NOTES] - this settings file is automatically deleted from any update
      * ---------------------------------------------------------------------------------------------------------------------------------*/

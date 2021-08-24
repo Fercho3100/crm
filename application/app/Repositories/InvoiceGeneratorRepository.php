@@ -11,8 +11,8 @@
  *
  * [NOTE] This is not generating a PDF invoice, just the invoice object and
  * all related lineitems, payments etc
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Repositories;

@@ -1,4 +1,4 @@
 <IfModule mod_rewrite.c>
-    ## NEXTLOOP - PREVENT DIRECT ACCESS TO CORE
+    ## Fernando Aguilar Madriz- Jeffrey S.S-Derian - PREVENT DIRECT ACCESS TO CORE
     Deny from  all
 </IfModule>

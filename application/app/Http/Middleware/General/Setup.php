@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This middleware class handles precheck processes for setup processes
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Middleware\General;

@@ -3,8 +3,8 @@
 /** -------------------------------------------------------------------------------------------------
  * TEMPLATE
  * This cronjob is envoked by by the task scheduler which is in 'application/app/Console/Kernel.php'
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *---------------------------------------------------------------------------------------------------*/
 
 namespace App\Cronjobs;

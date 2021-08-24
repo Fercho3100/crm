@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This classes renders the response for the [store] process for the foo
  * controller
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Responses\Foo;

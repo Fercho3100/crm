@@ -9,8 +9,8 @@
 
 /** --------------------------------------------------------------------------------
  * This service provider configures the applications email settings
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Providers;

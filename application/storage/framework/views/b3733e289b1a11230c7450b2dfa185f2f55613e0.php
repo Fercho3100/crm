@@ -1,7 +1,7 @@
 <!--ALL THIRD PART JAVASCRIPTS-->
 <script src="public/vendor/js/vendor.footer.js?v=<?php echo e(config('system.versioning')); ?>"></script>
 
-<!--nextloop.core.js-->
+<!--Fernando Aguilar Madriz- Jeffrey S.S-Derian.core.js-->
 <script src="public/js/core/ajax.js?v=<?php echo e(config('system.versioning')); ?>"></script>
 
 <!--MAIN JS - AT END-->

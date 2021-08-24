@@ -2,8 +2,8 @@
 
 /** --------------------------------------------------------------------------------
  * This classes renders the [assign project] email and stores it in the queue
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Mail;

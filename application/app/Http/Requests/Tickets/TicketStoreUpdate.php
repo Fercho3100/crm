@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This middleware class validates input requests for the tickets controller
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Requests\Tickets;

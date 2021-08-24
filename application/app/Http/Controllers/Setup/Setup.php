@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This controller manages the business logic for the setup wizard
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Controllers\Setup;

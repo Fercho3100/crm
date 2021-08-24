@@ -10,8 +10,8 @@
  * This cronjob is envoked by by the task scheduler which is in 'application/app/Console/Kernel.php'
  *      - the scheduler is set to run this every minuted
  *      - the schedler itself is evoked by the signle cronjob set in cpanel (which runs every minute)
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *-----------------------------------------------------------------------------------------------------*/
 
 namespace App\Cronjobs\Onetime;

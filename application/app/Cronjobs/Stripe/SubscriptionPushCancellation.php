@@ -4,8 +4,8 @@
  * [Stripe Complete Onetime]
  *
  *  - Cancels and subsccription that was initiated in teh stripe dashboard
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *-----------------------------------------------------------------------------------------------------*/
 
 namespace App\Cronjobs\Stripe;

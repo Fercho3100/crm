@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This is the main controller and it extends the laravel case controller
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Controllers;

@@ -13,7 +13,7 @@ function NXbootstrap($self, action) {
 
     //validator.js defaults (required particularly for select2, to add 'error' class)
     $.validator.setDefaults({
-        errorPlacement: function (error, element) {
+        errorPlacement: function(error, element) {
             if (element.parent('.input-group').length) {
                 //radios and checkbox
                 error.insertAfter(element.parent());
@@ -53,29 +53,29 @@ function NXbootstrap($self, action) {
     Dropzone.prototype.defaultOptions.addRemoveLinks = true;
     Dropzone.prototype.defaultOptions.timeout = 6400000;
 
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         //initialise tooltips
-        $(function () {
+        $(function() {
             //fixed tool tip positioning
-            $(document).on('mouseenter', '[data-toggle="tooltip"]:not([data-original-title])', function () {
+            $(document).on('mouseenter', '[data-toggle="tooltip"]:not([data-original-title])', function() {
                 $(this).tooltip().tooltip('show').tooltip('hide').tooltip('show');
             });
 
             //fixed tool tip positioning
-            $(document).on('mouseenter', '.data-toggle-tooltip:not([data-original-title])', function () {
+            $(document).on('mouseenter', '.data-toggle-tooltip:not([data-original-title])', function() {
                 $(this).tooltip().tooltip('show').tooltip('hide').tooltip('show');
             });
 
             //specif tooltips for action buttons
             if (NX.show_action_button_tooltips) {
-                $(document).on('mouseenter', '.data-toggle-action-tooltip:not([data-original-title])', function () {
+                $(document).on('mouseenter', '.data-toggle-action-tooltip:not([data-original-title])', function() {
                     $(this).tooltip().tooltip('show').tooltip('hide').tooltip('show');
                 });
             }
 
             //close oll tooltips when body has been clicked
-            $(document).on('click', 'body', function () {
+            $(document).on('click', 'body', function() {
                 $('.tooltip').remove();
             });
 
@@ -83,16 +83,16 @@ function NXbootstrap($self, action) {
 
 
         //initialise opovers
-        $(function () {
+        $(function() {
             $('[data-toggle="popover"]').popover();
             $('.data-toggle-popover').popover();
         });
 
         //hide tooltip when the button or link is clicked
-        $(document).on('click', '[data-toggle="tooltip"]', function () {
+        $(document).on('click', '[data-toggle="tooltip"]', function() {
             $('[data-toggle="tooltip"]').tooltip("hide");
         });
-        $(document).on('click', '.data-toggle-tooltip', function () {
+        $(document).on('click', '.data-toggle-tooltip', function() {
             $('[data-toggle="tooltip"]').tooltip("hide");
         });
 
@@ -125,7 +125,7 @@ function NXbootstrap($self, action) {
 
 
         /**
-         * [nextloop] [datepicker]
+         * [Fernando Aguilar Madriz- Jeffrey S.S-Derian] [datepicker]
          * change the format of the date that is posted to backend (mysql format). This way, you can
          * display date to user in one format and send to backend in another format
          * place a hidden field with same name directly under the date field
@@ -135,13 +135,13 @@ function NXbootstrap($self, action) {
          * <input type="text" class="form-control form-control-sm pickadate" name="due_date">
          * <input class="mysql-date" type="hidden" name="due_date" value="">
          * */
-        $('.pickadate, .pickadate-lg').on('changeDate', function (e) {
+        $('.pickadate, .pickadate-lg').on('changeDate', function(e) {
             var mysql_date = moment(e.date).format('YYYY-MM-DD');
             var id = $(this).attr('name');
             $("#" + id).val(mysql_date);
         });
 
-        $('.pickadate, .pickadate-lg').on('change', function (e) {
+        $('.pickadate, .pickadate-lg').on('change', function(e) {
             var id = $(this).attr('name');
             //reset for empty fields
             if ($(this).val() == '') {
@@ -174,15 +174,15 @@ function NXbootstrap($self, action) {
             ajax: {
                 dataType: "json",
                 type: "GET",
-                data: function (params) {
+                data: function(params) {
                     var queryParameters = {
                         term: params.term
                     }
                     return queryParameters;
                 },
-                processResults: function (data) {
+                processResults: function(data) {
                     return {
-                        results: $.map(data, function (item) {
+                        results: $.map(data, function(item) {
                             return {
                                 text: item.value,
                                 id: item.id
@@ -206,15 +206,15 @@ function NXbootstrap($self, action) {
             ajax: {
                 dataType: "json",
                 type: "GET",
-                data: function (params) {
+                data: function(params) {
                     var queryParameters = {
                         term: params.term
                     }
                     return queryParameters;
                 },
-                processResults: function (data) {
+                processResults: function(data) {
                     return {
-                        results: $.map(data, function (item) {
+                        results: $.map(data, function(item) {
                             return {
                                 text: item.value,
                                 id: item.id
@@ -239,15 +239,15 @@ function NXbootstrap($self, action) {
             ajax: {
                 dataType: "json",
                 type: "GET",
-                data: function (params) {
+                data: function(params) {
                     var queryParameters = {
                         term: params.term
                     }
                     return queryParameters;
                 },
-                processResults: function (data) {
+                processResults: function(data) {
                     return {
-                        results: $.map(data, function (item) {
+                        results: $.map(data, function(item) {
                             return {
                                 text: item.value,
                                 id: item.id
@@ -331,9 +331,9 @@ function NXbootstrap($self, action) {
      *  [jqphotoswipe]
      *  @source https://ergec.github.io/jQuery-for-PhotoSwipe/
      * -----------------------------------------------------------*/
-    $(document).ready(function () {
+    $(document).ready(function() {
         $(".fancybox").jqPhotoSwipe({
-            galleryOpen: function (gallery) {
+            galleryOpen: function(gallery) {
                 gallery.toggleDesktopZoom();
             }
         });
@@ -349,8 +349,8 @@ function NXbootstrap($self, action) {
      * - the dropdown must have a class [select2-preselected]
      * - the dropdown must have an attr [data-preselected='foo']
      * ---------------------------------------------------------*/
-    $(document).ready(function () {
-        $(document).find(".select2-preselected").each(function () {
+    $(document).ready(function() {
+        $(document).find(".select2-preselected").each(function() {
             var preselected = $(this).attr('data-preselected');
             console.log(preselected);
             if (preselected != '') {
@@ -365,7 +365,7 @@ function NXbootstrap($self, action) {
 /** ----------------------------------------------------------
  *  - tiny mce
  *  - basic fixed height of 300px
- *  - reinitialized by nextloop ajax
+ *  - reinitialized by Fernando Aguilar Madriz- Jeffrey S.S-Derian ajax
  * @param numeric tinyMCEHeight optional height setting
  * @param numeric tinyMCESelector optional element selector
  * ---------------------------------------------------------*/
@@ -392,11 +392,11 @@ function nxTinyMCEBasic(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-textare
         height: tinyMCEHeight,
         toolbar: 'bold link bullist numlist image media alignleft aligncenter alignright outdent indent hr table code fullscreen',
         //autosave/update text area
-        setup: function (editor) {
-            editor.on('change', function () {
+        setup: function(editor) {
+            editor.on('change', function() {
                 editor.save();
             });
-            editor.on('FullscreenStateChanged', function (e) {
+            editor.on('FullscreenStateChanged', function(e) {
                 if (e.state) {
                     $('.modal-dialog').attr('style', 'transform: none !important');
                 } else {
@@ -405,13 +405,13 @@ function nxTinyMCEBasic(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-textare
             });
         },
         //upload images
-        images_upload_handler: function (blobInfo, success, failure) {
+        images_upload_handler: function(blobInfo, success, failure) {
             var xhr, formData;
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
             xhr.open('POST', 'upload-tinymce-image');
             xhr.setRequestHeader("X-CSRF-Token", NX.csrf_token);
-            xhr.onload = function () {
+            xhr.onload = function() {
                 var json;
                 if (xhr.status != 200) {
                     failure('HTTP Error: ' + xhr.status);
@@ -432,7 +432,7 @@ function nxTinyMCEBasic(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-textare
     });
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     nxTinyMCEBasic();
 });
 
@@ -441,7 +441,7 @@ $(document).ready(function () {
 /** ----------------------------------------------------------
  *  - tiny mce
  *  - basic fixed height of 300px
- *  - reinitialized by nextloop ajax
+ *  - reinitialized by Fernando Aguilar Madriz- Jeffrey S.S-Derian ajax
  * @param numeric tinyMCEHeight optional height setting
  * @param numeric tinyMCESelector optional element selector
  * ---------------------------------------------------------*/
@@ -470,11 +470,11 @@ function nxTinyMCEExtended(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-text
         height: tinyMCEHeight,
         toolbar: 'formatselect | bold italic strikethrough forecolor backcolor textcolor colorpicker | link image media | alignleft aligncenter alignright alignjustify hr | numlist bullist outdent indent table | code media fullscreen',
         //autosave/update text area
-        setup: function (editor) {
-            editor.on('change', function () {
+        setup: function(editor) {
+            editor.on('change', function() {
                 editor.save();
             });
-            editor.on('FullscreenStateChanged', function (e) {
+            editor.on('FullscreenStateChanged', function(e) {
                 if (e.state) {
                     $('.modal-dialog').attr('style', 'transform: none !important');
                 } else {
@@ -483,13 +483,13 @@ function nxTinyMCEExtended(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-text
             });
         },
         //upload images
-        images_upload_handler: function (blobInfo, success, failure) {
+        images_upload_handler: function(blobInfo, success, failure) {
             var xhr, formData;
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
             xhr.open('POST', 'upload-tinymce-image');
             xhr.setRequestHeader("X-CSRF-Token", NX.csrf_token);
-            xhr.onload = function () {
+            xhr.onload = function() {
                 var json;
                 if (xhr.status != 200) {
                     failure('HTTP Error: ' + xhr.status);
@@ -510,7 +510,7 @@ function nxTinyMCEExtended(tinyMCEHeight = 400, tinyMCESelector = '.tinymce-text
     });
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     nxTinyMCEExtended();
 });
 
@@ -519,7 +519,7 @@ $(document).ready(function () {
 /** ----------------------------------------------------------
  *  - tiny mce
  *  - basic fixed height of 300px
- *  - reinitialized by nextloop ajax
+ *  - reinitialized by Fernando Aguilar Madriz- Jeffrey S.S-Derian ajax
  * @param numeric tinyMCEHeight optional height setting
  * @param numeric tinyMCESelector optional element selector
  * @param string plugins optional list of additional plugins to load e.g. 'fullpage link image'
@@ -549,8 +549,8 @@ function nxTinyMCEAdvanced(tinyMCEHeight = 300, tinyMCESelector = '.tinymce-text
             toolbar
         ],
         //autosave/update text area
-        setup: function (editor) {
-            editor.on('change', function () {
+        setup: function(editor) {
+            editor.on('change', function() {
                 editor.save();
             });
         }
@@ -575,7 +575,7 @@ jconfirm.defaults = {
  *     - default delete item dialogue
  *     - uses lang as sent in header template
  * -----------------------------------------------------------*/
-$(document).on('click', '.delete-item', function () {
+$(document).on('click', '.delete-item', function() {
 
 
     $self.tooltip("hide");
@@ -596,7 +596,7 @@ $(document).on('click', '.delete-item', function () {
             yes: {
                 text: NXLANG.continue,
                 btnClass: ' btn-sm btn-outline-danger',
-                action: function () {
+                action: function() {
                     //ajax request
                     nxAjaxUxRequest($self);
                 }
@@ -613,7 +613,7 @@ $(document).on('click', '.delete-item', function () {
  *     - default delete item dialogue
  *     - uses lang as sent in header template
  * -----------------------------------------------------------*/
-$(document).on('click', '.confirm-action-danger, .confirm-action-info, .confirm-action-success', function () {
+$(document).on('click', '.confirm-action-danger, .confirm-action-info, .confirm-action-success', function() {
     //the clicked element
     var $self = $(this);
 
@@ -653,7 +653,7 @@ $(document).on('click', '.confirm-action-danger, .confirm-action-info, .confirm-
             yes: {
                 text: NXLANG.continue,
                 btnClass: confirm_popup_button_class,
-                action: function () {
+                action: function() {
                     //fast delete ux
                     if ($self.hasClass('js-delete-ux-confirm')) {
                         NX.uxDeleteItem($self);
@@ -672,7 +672,7 @@ $(document).on('click', '.confirm-action-danger, .confirm-action-info, .confirm-
 /** ----------------------------------------------------------
  * [side filter panel] - toggle
  * ---------------------------------------------------------*/
-NX.clearSystemCache = function ($self) {
+NX.clearSystemCache = function($self) {
     //manually trigger confirm
     $.confirm({
         type: 'red',
@@ -686,7 +686,7 @@ NX.clearSystemCache = function ($self) {
             yes: {
                 text: NXLANG.continue,
                 btnClass: ' btn-sm btn-outline-danger',
-                action: function () {
+                action: function() {
                     //fast delete ux
                     if ($self.hasClass('js-delete-ux-confirm')) {
                         NX.uxDeleteItem($self);
@@ -703,7 +703,7 @@ NX.clearSystemCache = function ($self) {
 /** ----------------------------------------------------------
  * [side filter panel] - toggle
  * ---------------------------------------------------------*/
-NX.toggleSidePanel = function ($self) {
+NX.toggleSidePanel = function($self) {
 
 
     //data
@@ -730,7 +730,7 @@ NX.toggleSidePanel = function ($self) {
 /** ----------------------------------------------------------
  * [list pages stats widget] toggle
  * ---------------------------------------------------------*/
-NX.toggleListPagesStatsWidget = function ($self) {
+NX.toggleListPagesStatsWidget = function($self) {
 
     //data
     var self = $self || {};
@@ -747,7 +747,7 @@ NX.toggleListPagesStatsWidget = function ($self) {
 /** ----------------------------------------------------------
  * [add user modal] - toggle client options
  * -----------------------------------------------------------*/
-NX.toggleAddUserClientOptions = function ($self) {
+NX.toggleAddUserClientOptions = function($self) {
 
     //data
     var self = $self || {};
@@ -769,7 +769,7 @@ NX.toggleAddUserClientOptions = function ($self) {
 /** ----------------------------------------------------------
  * [add item modal button] - reset target form
  * -----------------------------------------------------------*/
-NX.resetTargetModalForm = function ($self) {
+NX.resetTargetModalForm = function($self) {
     //data
     var self = $self || {};
     var target_id = self.data('target');
@@ -784,7 +784,7 @@ NX.resetTargetModalForm = function ($self) {
 /** ----------------------------------------------------------
  * [reset filter panel] - resets the form fields
  * -----------------------------------------------------------*/
-NX.resetFilterPanelFields = function ($self) {
+NX.resetFilterPanelFields = function($self) {
     var target = $(".right-sidebar");
     //reset input fields
     target.find('form').trigger("reset");
@@ -798,7 +798,7 @@ NX.resetFilterPanelFields = function ($self) {
 /** ----------------------------------------------------------
  * [switch toggle content] - toggle hidden content using switch
  * -----------------------------------------------------------*/
-NX.switchToggleHiddenContent = function (self) {
+NX.switchToggleHiddenContent = function(self) {
     var target_id = self.data('target');
     var target = $("#" + target_id);
     if (self.is(':checked')) {
@@ -811,7 +811,7 @@ NX.switchToggleHiddenContent = function (self) {
 /** ----------------------------------------------------------
  *  [various] - toggle form options
  * -----------------------------------------------------------*/
-NX.toggleFormOptions = function ($self) {
+NX.toggleFormOptions = function($self) {
 
     //data
     var self = $self || {};
@@ -828,7 +828,7 @@ NX.toggleFormOptions = function ($self) {
 /** ----------------------------------------------------------
  *  [login-signup-forgot] - toggle login forms
  * -----------------------------------------------------------*/
-NX.toggleLoginForms = function ($self) {
+NX.toggleLoginForms = function($self) {
 
     var self = $self || {};
     //data
@@ -836,7 +836,7 @@ NX.toggleLoginForms = function ($self) {
     var target = $("#" + target_id);
 
     //only if option is not already visible
-    $(".login-signup-forgot").fadeOut(function () {
+    $(".login-signup-forgot").fadeOut(function() {
         target.fadeIn('slow');
     });
 }
@@ -845,7 +845,7 @@ NX.toggleLoginForms = function ($self) {
 /** ----------------------------------------------------------
  *  [dynamic search] - list results dynamic search
  * -----------------------------------------------------------*/
-$(document).ready(function () {
+$(document).ready(function() {
 
     var timeoutID = null;
     var delayTime = 1000; //miliseconds
@@ -856,7 +856,7 @@ $(document).ready(function () {
     }
 
 
-    $(document).on('input', '.search-records', function (e) {
+    $(document).on('input', '.search-records', function(e) {
         var nxSearchRecord = $(this);
         clearTimeout(timeoutID);
         timeoutID = setTimeout(() => nxDynamicSearch(nxSearchRecord, e), delayTime);
@@ -868,7 +868,7 @@ $(document).ready(function () {
 /** ----------------------------------------------------------
  * [expandable tab pages] project | lead
  * ---------------------------------------------------------*/
-NX.expandTabbedPage = function ($self) {
+NX.expandTabbedPage = function($self) {
     //data
     var self = $self || {};
     var split_screen = $("#projects-tab-split-screen");
@@ -887,7 +887,7 @@ NX.expandTabbedPage = function ($self) {
 /** ----------------------------------------------------------
  * [add-edit-project] - add or edit project button clicked
  * -----------------------------------------------------------*/
-NX.addEditProjectButton = function ($self) {
+NX.addEditProjectButton = function($self) {
     //set initial project progress for "manual slider"
     NX.varInitialProjectProgress = parseInt($self.attr('data-project-progress'));
 }
@@ -898,14 +898,14 @@ NX.addEditProjectButton = function ($self) {
  *  - check if left menu is open/collapsed. Update with new state
  *  - check if statspanel is open collapsed. Update with new state
  * -----------------------------------------------------------*/
-NX.updateUserUXPreferences = function ($self) {
+NX.updateUserUXPreferences = function($self) {
 
     var tempurl = $self.attr('data-url-temp');
     var type = $self.attr('data-type');
 
     //left menu
     if (type == 'leftmenu') {
-        setTimeout(function () {
+        setTimeout(function() {
             var new_menu_position = $('body').hasClass('mini-sidebar') ? 'collapsed' : 'open';
             var url = tempurl + '?leftmenu_position=' + new_menu_position;
             $self.attr('data-url', url);
@@ -915,7 +915,7 @@ NX.updateUserUXPreferences = function ($self) {
 
     //stats panel
     if (type == 'statspanel') {
-        setTimeout(function () {
+        setTimeout(function() {
             var new_statspanel_position = $('#list-pages-stats-widget').is(':visible') ? 'open' : 'collapsed';
             var url = tempurl + '?statspanel_position=' + new_statspanel_position;
             $self.attr('data-url', url);
@@ -927,7 +927,7 @@ NX.updateUserUXPreferences = function ($self) {
 /** ----------------------------------------------------------
  *  [apply filter button] - button clicked
  * -----------------------------------------------------------*/
-NX.applyFilterButton = function ($self) {
+NX.applyFilterButton = function($self) {
     //reset search form field
     $("#search_query").val('');
 }
@@ -936,7 +936,7 @@ NX.applyFilterButton = function ($self) {
 /** ----------------------------------------------------------
  *  [lists main checkbox] - checkbox clicked
  * -----------------------------------------------------------*/
-NX.listCheckboxAll = function ($self) {
+NX.listCheckboxAll = function($self) {
 
     //actions container
     var $actions = $("#" + $self.attr('data-actions-container-class'));
@@ -953,7 +953,7 @@ NX.listCheckboxAll = function ($self) {
         $actions.fadeIn();
 
         //check all visible childred
-        $children.each(function () {
+        $children.each(function() {
             //only tick check boxes that are not disabled
             if (!$(this).prop('disabled')) {
                 $(this).prop('checked', true);
@@ -974,7 +974,7 @@ NX.listCheckboxAll = function ($self) {
 /** ----------------------------------------------------------
  *  [lists main checkbox] - checkbox clicked
  * -----------------------------------------------------------*/
-NX.listCheckbox = function ($self) {
+NX.listCheckbox = function($self) {
 
     //crumbs container
     var $crumbs = $(".list-pages-crumbs");
@@ -987,7 +987,7 @@ NX.listCheckbox = function ($self) {
 
     //count checked items
     var count = 0;
-    wrapper.find(".listcheckbox").each(function () {
+    wrapper.find(".listcheckbox").each(function() {
         if ($(this).is(":checked")) {
             count++;
         }
@@ -1004,7 +1004,7 @@ NX.listCheckbox = function ($self) {
 /** ----------------------------------------------------------
  *  deselect list pages actions checkboxes after every ajax call
  * -----------------------------------------------------------*/
-NX.listCheckboxesReset = function () {
+NX.listCheckboxesReset = function() {
     //unselect check boxes
     $(".listcheckbox").prop('checked', false);
     //hide actions
@@ -1015,7 +1015,7 @@ NX.listCheckboxesReset = function () {
  *  [projects & assiged users]
  *   select users to show in assigned drop downn list
  * -----------------------------------------------------------*/
-NX.projectsAndAssignedClearToggle = function ($self) {
+NX.projectsAndAssignedClearToggle = function($self) {
 
     //the assigned users dropdown list
     var dropdown_list = $("#" + $self.attr('data-assigned-dropdown'));
@@ -1029,7 +1029,7 @@ NX.projectsAndAssignedClearToggle = function ($self) {
  *  [projects & assiged users]
  *   select users to show in assigned drop downn list
  * -----------------------------------------------------------*/
-NX.projectAndAssignedCToggle = function (e, $self) {
+NX.projectAndAssignedCToggle = function(e, $self) {
 
     //the client's id
     var project_id = e.params.data.id;
@@ -1045,7 +1045,7 @@ NX.projectAndAssignedCToggle = function (e, $self) {
     $.ajax({
         type: 'GET',
         url: NX.site_url + "/feed/projectassigned?project_id=" + project_id
-    }).then(function (data) {
+    }).then(function(data) {
 
         //loop through the returned array and create new select option items
         if (data.length > 0) {
@@ -1075,7 +1075,7 @@ NX.projectAndAssignedCToggle = function (e, $self) {
 /** ----------------------------------------------------------
  *   enable or disable fields and buttons on the form
  * -----------------------------------------------------------*/
-NX.recordTaskTimeToggle = function (action = 'disable') {
+NX.recordTaskTimeToggle = function(action = 'disable') {
 
 
     //disable
@@ -1101,7 +1101,7 @@ NX.recordTaskTimeToggle = function (action = 'disable') {
  *  [projects & tasks]
  *   clearing and disabling the dropdown
  * -----------------------------------------------------------*/
-NX.projectsTasksClearToggle = function ($self, action = 'disable') {
+NX.projectsTasksClearToggle = function($self, action = 'disable') {
 
     //the assigned users dropdown list
     var dropdown_list = $("#" + $self.attr('data-task-dropdown'));
@@ -1115,7 +1115,7 @@ NX.projectsTasksClearToggle = function ($self, action = 'disable') {
  *  [projects & project tasks]
  *  Return a list of tasks assigned to the logged in user
  * -----------------------------------------------------------*/
-NX.projectAssignedTasksToggle = function (e, $self) {
+NX.projectAssignedTasksToggle = function(e, $self) {
 
     //the client's id
     var project_id = e.params.data.id;
@@ -1135,7 +1135,7 @@ NX.projectAssignedTasksToggle = function (e, $self) {
     $.ajax({
         type: 'GET',
         url: NX.site_url + "/feed/projects-my-assigned-task?project_id=" + project_id
-    }).then(function (data) {
+    }).then(function(data) {
 
         //loop through the returned array and create new select option items
         if (data.length > 0) {
@@ -1173,7 +1173,7 @@ NX.projectAssignedTasksToggle = function (e, $self) {
 /** ----------------------------------------------------------
  *  [clients & projects] - select client to show projects
  * -----------------------------------------------------------*/
-NX.clientAndProjectsClearToggle = function ($self) {
+NX.clientAndProjectsClearToggle = function($self) {
 
     //the projects dropdown list
     var projects_dropdown = $("#" + $self.attr('data-projects-dropdown'));
@@ -1186,7 +1186,7 @@ NX.clientAndProjectsClearToggle = function ($self) {
 /** ----------------------------------------------------------
  *  [clients & projects] - select client to show projects
  * -----------------------------------------------------------*/
-NX.clientAndProjectsToggle = function (e, $self) {
+NX.clientAndProjectsToggle = function(e, $self) {
 
     //the client's id
     var client_id = e.params.data.id;
@@ -1211,7 +1211,7 @@ NX.clientAndProjectsToggle = function (e, $self) {
     $.ajax({
         type: 'GET',
         url: NX.site_url + "/feed/projects?ref=" + feed_ref + "&client_id=" + client_id
-    }).then(function (data) {
+    }).then(function(data) {
 
         //loop through the returned array and create new select option items
         if (data.length > 0) {
@@ -1249,17 +1249,17 @@ NX.clientAndProjectsToggle = function (e, $self) {
 /** ----------------------------------------------------------
  *  [toggle ticket editor or view mode]
  * -----------------------------------------------------------*/
-NX.ticketEditorToggle = function () {
+NX.ticketEditorToggle = function() {
     //elements
     var ticket_display = $("#ticket-body");
     var ticket_editor = $("#ticket-editor");
 
     if (ticket_editor.is(":visible")) {
-        ticket_editor.fadeOut(function () {
+        ticket_editor.fadeOut(function() {
             ticket_display.show();
         });
     } else {
-        ticket_display.fadeOut(function () {
+        ticket_display.fadeOut(function() {
             ticket_editor.show();
         });
     }
@@ -1271,7 +1271,7 @@ NX.ticketEditorToggle = function () {
  *  @attr data-show-element-container - element to show
  *  @attr data-hide-element-container - element to hide (optional)
  * -------------------------------------------------------------------*/
-NX.togglePlaceHolders = function ($self) {
+NX.togglePlaceHolders = function($self) {
     var $show_element = $("#" + $self.attr('data-show-element-container'));
     var $hide_element = $("#" + $self.attr('data-hide-element-container'));
 
@@ -1285,7 +1285,7 @@ NX.togglePlaceHolders = function ($self) {
  *  [toggle place holder elements] 
  *  @attr data-main-element-container
  * -----------------------------------------------------------*/
-NX.toggleCloseButtonElements = function ($self) {
+NX.toggleCloseButtonElements = function($self) {
     var $show_element = $("#" + $self.attr('data-show-element-container'));
     var $hide_element = $("#" + $self.attr('data-hide-element-container'));
     //toggle
@@ -1300,7 +1300,7 @@ NX.toggleCloseButtonElements = function ($self) {
  *  - close editing boxes
  *  - create new checklist item
  * -----------------------------------------------------------*/
-NX.toggleEditTaskChecklist = function ($self) {
+NX.toggleEditTaskChecklist = function($self) {
     //get copy of text area
     var $cloned = $("#element-checklist-text").clone();
     $cloned.addClass("copied-checklist-text");
@@ -1309,7 +1309,7 @@ NX.toggleEditTaskChecklist = function ($self) {
     //toggle open task for editing
     if (toggle == 'edit') {
         //restore all checklist items & remove any text areas
-        $('#card-checklist').find('.copied-checklist-text').each(function () {
+        $('#card-checklist').find('.copied-checklist-text').each(function() {
             var $checklist = $(this).closest('.checklist-item');
             $checklist.children().show();
             $checklist.show();
@@ -1337,7 +1337,7 @@ NX.toggleEditTaskChecklist = function ($self) {
     //toggle open task for editing
     if (toggle == 'new') {
         //restore all checklist items & remove any text areas
-        $('#card-checklist').find('.copied-checklist-text').each(function () {
+        $('#card-checklist').find('.copied-checklist-text').each(function() {
             var $checklist = $(this).closest('.checklist-item');
             $checklist.children().show();
             $checklist.show();
@@ -1390,7 +1390,7 @@ NX.toggleEditTaskChecklist = function ($self) {
 /** ----------------------------------------------------------
  *  [task - reset the task form]
  * -----------------------------------------------------------*/
-NX.resetCardModal = function ($self) {
+NX.resetCardModal = function($self) {
 
     //re-hide the modal
     $("#cardModalContent").addClass('hidden');
@@ -1409,7 +1409,7 @@ NX.resetCardModal = function ($self) {
  *  [better ux on delete items] 
  * - remove item from list whilst the ajax happend in background
  * -----------------------------------------------------------*/
-NX.uxDeleteItem = function ($self) {
+NX.uxDeleteItem = function($self) {
     var $parent = $("#" + $self.attr('data-parent-container'));
     $parent.slideUp();
     $parent.remove();
@@ -1420,7 +1420,7 @@ NX.uxDeleteItem = function ($self) {
 /** ----------------------------------------------------------
  *  [toggle task timer] 
  * -----------------------------------------------------------*/
-NX.toggleTaskTimer = function ($self) {
+NX.toggleTaskTimer = function($self) {
 
     var taskid = $self.attr('data-task-id');
 
@@ -1468,7 +1468,7 @@ NX.toggleTaskTimer = function ($self) {
 /** ----------------------------------------------------------
  *  [toggle settings left menu]
  * -----------------------------------------------------------*/
-NX.toggleSettingsLeftMenu = function ($self) {
+NX.toggleSettingsLeftMenu = function($self) {
     var $menu = $(".settings-menu");
     if ($menu.hasClass('toggle-left-menu')) {
         $menu.removeClass('toggle-left-menu');
@@ -1482,7 +1482,7 @@ NX.toggleSettingsLeftMenu = function ($self) {
 /** ----------------------------------------------------------
  *  [convert lead to customer form]
  * -----------------------------------------------------------*/
-NX.convertLeadForm = function ($self, action) {
+NX.convertLeadForm = function($self, action) {
 
     //update form with actual content
     $("#convert_lead_firstname").val($("#card-lead-firstname-containter").html());
@@ -1502,7 +1502,7 @@ NX.convertLeadForm = function ($self, action) {
     $("#convert_lead_value").val($("#lead_value").val());
 
     //clean up
-    $(".form-control").each(function () {
+    $(".form-control").each(function() {
         if ($(this).val() == '---') {
             $(this).val('');
         }
@@ -1513,12 +1513,12 @@ NX.convertLeadForm = function ($self, action) {
 
     //fade in the form
     if (action == 'show') {
-        $("#cardModalBody").fadeOut(function () {
+        $("#cardModalBody").fadeOut(function() {
             $("#leadConvertToCustomer").fadeIn('slow');
             $("#leadConvertToCustomerFooter").fadeIn('slow');
         });
     } else {
-        $("#leadConvertToCustomer").fadeOut(function () {
+        $("#leadConvertToCustomer").fadeOut(function() {
             $("#leadConvertToCustomerFooter").fadeOut('fast');
             $("#cardModalBody").fadeIn('slow');
         });
@@ -1529,15 +1529,15 @@ NX.convertLeadForm = function ($self, action) {
 /** ----------------------------------------------------------
  *  [top nav events icon clicked]
  * -----------------------------------------------------------*/
-NX.eventsTopNav = function ($self) {
-    //reset the panel
-    $("#topnav-events-container").html('');
-    //hide footer
-    $("#topnav-events-container-footer").hide();
-    //request
-    nxAjaxUxRequest($self);
-}
-//scroll bar for events dropdown
+NX.eventsTopNav = function($self) {
+        //reset the panel
+        $("#topnav-events-container").html('');
+        //hide footer
+        $("#topnav-events-container-footer").hide();
+        //request
+        nxAjaxUxRequest($self);
+    }
+    //scroll bar for events dropdown
 function nxEventsTopNavScroll($self) {
     //only if element exists
     if ($("#topnav-events-container").length) {
@@ -1565,7 +1565,7 @@ function nxProjectTimelineScroll($self) {
 /** ----------------------------------------------------------
  *  [top nav events - mark all events as read]
  * -----------------------------------------------------------*/
-NX.eventsTopNavMarkAllRead = function ($self) {
+NX.eventsTopNavMarkAllRead = function($self) {
     //reset the panel
     $("#topnav-events-container").html('');
     //hide footer
@@ -1581,7 +1581,7 @@ NX.eventsTopNavMarkAllRead = function ($self) {
 /** ----------------------------------------------------------
  *  [top nav events - mark event(s) as read]
  * -----------------------------------------------------------*/
-NX.eventsMarkRead = function ($self, items = 'single') {
+NX.eventsMarkRead = function($self, items = 'single') {
     //remove a single item
     if (items == 'single') {
         var $event = $("#" + $self.attr('data-container'));
@@ -1601,7 +1601,7 @@ NX.eventsMarkRead = function ($self, items = 'single') {
 /** ----------------------------------------------------------
  *  [change the browser url]
  * -----------------------------------------------------------*/
-NX.browserPushState = function ($self) {
+NX.browserPushState = function($self) {
     //dynamic url
     var new_url = $self.attr('data-dynamic-url');
 
@@ -1617,7 +1617,7 @@ NX.browserPushState = function ($self) {
 /** ----------------------------------------------------------
  *  [settings][email template selected]
  * -----------------------------------------------------------*/
-NX.loadEmailTemplate = function ($self) {
+NX.loadEmailTemplate = function($self) {
     var value = $self.val();
 
     //update action url and start ajax request
@@ -1630,7 +1630,7 @@ NX.loadEmailTemplate = function ($self) {
 /** ----------------------------------------------------------
  *  [settings][email template selected]
  * -----------------------------------------------------------*/
-NX.toggleInvoiceTaxEditing = function ($self) {
+NX.toggleInvoiceTaxEditing = function($self) {
 
     var action = $self.attr('id');
 
@@ -1652,7 +1652,7 @@ NX.toggleInvoiceTaxEditing = function ($self) {
 /** ----------------------------------------------------------
  * payment method has been selected - show correct pay now buttons
  * -----------------------------------------------------------*/
-NX.selectPaymentGateway = function ($self) {
+NX.selectPaymentGateway = function($self) {
 
     var gateway_id = $self.attr('data-gateway-id');
 
@@ -1713,7 +1713,7 @@ NX.selectPaymentGateway = function ($self) {
 /** ----------------------------------------------------------
  *  [shipping address] same as billing address
  * -----------------------------------------------------------*/
-NX.shippingAddressSameBilling = function ($self) {
+NX.shippingAddressSameBilling = function($self) {
     //make address the same as billing
     if ($self.prop("checked")) {
         $("#client_shipping_street").val($("#client_billing_street").val());
@@ -1754,13 +1754,13 @@ function NXleftMenuToolTips() {
         },
         template: '<div class="tooltip menu-tooltips" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     });
-    $(document).on('click', '.menu-tooltip', function () {
+    $(document).on('click', '.menu-tooltip', function() {
         $('.menu-tooltip').tooltip("hide");
     });
 };
-$(document).ready(function () {
+$(document).ready(function() {
     NXleftMenuToolTips();
-    $('.menu-tooltip').mouseleave(function () {
+    $('.menu-tooltip').mouseleave(function() {
         NXleftMenuToolTips();
     });
 });
@@ -1789,12 +1789,12 @@ function nxAutoHideSideMenu() {
     }
 }
 //window is already small
-$(document).ready(function () {
+$(document).ready(function() {
     if ($(window).width() <= 765) {
         nxAutoHideSideMenu();
     }
     //window has been resized
-    $(window).resize(function () {
+    $(window).resize(function() {
         if ($(window).width() <= 765) {
             nxAutoHideSideMenu();
         }
@@ -1805,7 +1805,7 @@ $(document).ready(function () {
 /** ----------------------------------------------------------
  *  [stripe product and price] - clear price
  * -----------------------------------------------------------*/
-NX.stripeProductPriceClearToggle = function ($self) {
+NX.stripeProductPriceClearToggle = function($self) {
 
     //the projects dropdown list
     var price_dropdown = $("#" + $self.attr('data-prices-dropdown'));
@@ -1819,7 +1819,7 @@ NX.stripeProductPriceClearToggle = function ($self) {
  *  [stripe product and price] - get list of stripe prices 
  *  the selected stripe product
  * -----------------------------------------------------------*/
-NX.stripeProductPriceToggle = function (e, $self) {
+NX.stripeProductPriceToggle = function(e, $self) {
 
     //the client's id
     var product_id = e.params.data.id;
@@ -1842,7 +1842,7 @@ NX.stripeProductPriceToggle = function (e, $self) {
     $.ajax({
         type: 'GET',
         url: NX.site_url + "/subscriptions/getprices?product_id=" + product_id
-    }).then(function (data) {
+    }).then(function(data) {
 
         //loop through the returned array and create new select option items
         if (data.length > 0) {

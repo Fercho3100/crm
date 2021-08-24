@@ -2,8 +2,8 @@
 /** --------------------------------------------------------------------------------
  * This classes renders the response for the [update] process for the temp settings
  * controller
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 namespace App\Http\Responses\Settings\Razorpay;
 use Illuminate\Contracts\Support\Responsable;

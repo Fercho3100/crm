@@ -3,15 +3,15 @@
 /** --------------------------------------------------------------------------------
  * This repository class manages all the data absctration for cloning invoices
  *
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 /** --------------------------------------------------------------------------
  * [Clone Invoice Repository]
  * Clone an invoice. The new invoice is set to 'draft status' by default
  * It can be published as needed
- * @source Nextloop
+ * @source Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *--------------------------------------------------------------------------*/
 namespace App\Repositories;
 

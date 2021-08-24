@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * SendQueued
  * Send emails that are stored in the email queue (database)
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Mail;
@@ -32,7 +32,7 @@ class SendQueued extends Mailable {
     }
 
     /**
-     * Nextloop: This will send the email that has been saved in the database (as sent by the cronjob)
+     * Fernando Aguilar Madriz- Jeffrey S.S-Derian: This will send the email that has been saved in the database (as sent by the cronjob)
      *
      * @return $this
      */

@@ -2,8 +2,8 @@
 
 /** --------------------------------------------------------------------------------
  * This service provider executes database updates
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Providers;

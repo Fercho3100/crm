@@ -12,7 +12,7 @@ define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian
 |--------------------------------------------------------------------------
 |
 | This is the same as BASE_DIR we have placed in application\bootstrap\app.php
@@ -63,7 +63,7 @@ $app = require_once __DIR__ . '/application/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian
 |--------------------------------------------------------------------------
 |
 | Set the base_path() to this root directory

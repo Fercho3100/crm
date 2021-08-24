@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * This classes renders the response for the [check] process for the updates settings
  * controller
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Http\Responses\Settings\Updates;

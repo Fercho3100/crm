@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel {
     ];
 
     /**
-     * Nextloop
+     * Fernando Aguilar Madriz- Jeffrey S.S-Derian
      * This is the applications task/cron scheduler. You can create more tasks in this schedule
      *      For cronjob tasks, you create the classes inside of '/App/Cronjobs/'
      *      Example is the email cronjob that runs every minute

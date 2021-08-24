@@ -13,7 +13,7 @@
 
 
         <!---------------------------------------------------------------------------------------
-            [NEXTLOOP}
+            [Fernando Aguilar Madriz- Jeffrey S.S-Derian}
              always collapse left menu for small devices
             (NB: this code is in the correct place. It must run before menu is added to DOM)
          --------------------------------------------------------------------------------------->

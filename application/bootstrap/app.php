@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian
 |--------------------------------------------------------------------------
 |
 | define this directory as the BASE_DIR constant that we can use sitewide

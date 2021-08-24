@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP NOTES
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian NOTES
 |--------------------------------------------------------------------------
 |
 | Most of the values in this config file are automatically taken from the
@@ -37,7 +37,7 @@ return [
     | Here you may specify the number of minutes that you wish the session
     | to be allowed to remain idle before it expires. If you want them
     | to immediately expire on the browser closing, set that option.
-    | [NEXTLOOP] set to a year: 525600
+    | [Fernando Aguilar Madriz- Jeffrey S.S-Derian] set to a year: 525600
     |
      */
 

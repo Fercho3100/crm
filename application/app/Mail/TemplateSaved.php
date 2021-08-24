@@ -3,8 +3,8 @@
 /** --------------------------------------------------------------------------------
  * [template]
  * This classes renders the [new email] email and stores it in the queue
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Mail;

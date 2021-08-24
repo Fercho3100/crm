@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP NOTES
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian NOTES
 |--------------------------------------------------------------------------
 |
 | Do not change the 'subunit' value from '1' this will cause decimal errors

@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP NOTES
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian NOTES
 |--------------------------------------------------------------------------
 |
 | Most of the values in this config file are automatically taken from the

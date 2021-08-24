@@ -1,3 +1,4 @@
+
 @foreach($projects as $project)
 <!--each row-->
 <tr id="projects_{{ $project->project_id }}">

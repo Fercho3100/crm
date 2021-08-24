@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| NEXTLOOP NOTES
+| Fernando Aguilar Madriz- Jeffrey S.S-Derian NOTES
 |--------------------------------------------------------------------------
 |
 | Most of the values in this config file are automatically taken from the
@@ -54,7 +54,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Debug reference [NEXTLOOP]
+    | Debug reference [Fernando Aguilar Madriz- Jeffrey S.S-Derian]
     |--------------------------------------------------------------------------
     |
     | Reference code used by the app when creating logs
@@ -187,7 +187,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
-         * nextloop: Service Providers...
+         * Fernando Aguilar Madriz- Jeffrey S.S-Derian: Service Providers...
          * These must only be run when setup has been completed
          * A check is added in each service provider
          */
@@ -244,7 +244,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'NX' => App\Nextloop\Core::class,
+        'NX' => App\Fernando Aguilar Madriz- Jeffrey S.S-Derian\Core::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],

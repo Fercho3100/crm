@@ -213,7 +213,7 @@ Route::group(['prefix' => 'projects'], function () {
 
     //dynamic load
     Route::any("/{project}/{section}", "Projects@showDynamic")
-        ->where(['project' => '[0-9]+', 'section' => 'details|comments|files|tasks|invoices|payments|timesheets|expenses|estimates|milestones|tickets|notes']);
+        ->where(['project' => '[0-9]+', 'section' => 'details|comments|files|tasks|invoices|payments|timesheets|expenses|estimates|tickets|notes']);
 });
 Route::resource('projects', 'Projects');
 

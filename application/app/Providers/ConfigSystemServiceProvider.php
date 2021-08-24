@@ -2,8 +2,8 @@
 
 /** --------------------------------------------------------------------------------
  * This service provider configures the applications theme
- * @package    Grow CRM
- * @author     NextLoop
+ * @package    CRM
+ * @author     Fernando Aguilar Madriz- Jeffrey S.S-Derian
  *----------------------------------------------------------------------------------*/
 
 namespace App\Providers;
