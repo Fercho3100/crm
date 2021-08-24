@@ -1,4 +1,5 @@
 @foreach($events as $event)
+
 @if($event->event_show_in_timeline == 'yes')
 <!--each events item-->
 <div class="sl-item timeline">

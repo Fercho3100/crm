@@ -465,6 +465,7 @@ class Projects extends Controller {
 
         //set page
         $page = $this->pageSettings('project', $project);
+        
 
         //refresh project
         $this->projectrepo->refreshProject($project);
@@ -512,6 +513,7 @@ class Projects extends Controller {
             'contacts' => $contacts,
             'fields' => \App\Models\CustomField::Where('customfields_type', 'projects')->where('customfields_status', 'enabled')->get(),
         ];
+        //dd( $payload);
 
         //response
         return new ShowResponse($payload);
@@ -544,7 +546,7 @@ class Projects extends Controller {
         case 'timesheets':
         case 'notes':
         case 'tickets':
-        case 'milestones':
+        
         case 'tasks':
             $sections = request()->segment(3);
             $section = rtrim($sections, 's');

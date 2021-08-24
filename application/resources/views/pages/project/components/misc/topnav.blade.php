@@ -16,39 +16,7 @@
                     data-url="{{ _url('/projects') }}/{{ $project->project_id }}/project-details"
                     href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.details')) }}</a>
             </li>
-            <!--[tasks]-->
-            @if(config('settings.project_permissions_view_tasks'))
-            <li class="nav-item">
-                <a class="nav-link tabs-menu-item   js-dynamic-url js-ajax-ux-request" data-toggle="tab"
-                    id="tabs-menu-tasks" data-loading-class="loading-tabs" data-loading-target="embed-content-container"
-                    data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/tasks"
-                    data-url="{{ url('/tasks') }}?source=ext&taskresource_type=project&taskresource_id={{ $project->project_id }}"
-                    href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.tasks')) }}</a>
-            </li>
-            @endif
-            <!--[milestones]-->
-            @if(config('settings.project_permissions_view_milestones'))
-            <li class="nav-item">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_milestones'] ?? '' }}"
-                    data-toggle="tab" id="tabs-menu-milestones" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/milestones"
-                    data-url="{{ url('/milestones') }}?source=ext&milestoneresource_type=project&milestoneresource_id={{ $project->project_id }}"
-                    href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.milestones')) }}</a>
-            </li>
-            @endif
-
-            <!--[files]-->
-            @if(config('settings.project_permissions_view_files'))
-            <li class="nav-item">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_files'] ?? '' }}"
-                    data-toggle="tab" id="tabs-menu-files" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/files"
-                    data-url="{{ url('/files') }}?source=ext&fileresource_type=project&fileresource_id={{ $project->project_id }}"
-                    href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.files')) }}</a>
-            </li>
-            @endif
+           
             <!--[comments]-->
             @if(config('settings.project_permissions_view_comments'))
             <li class="nav-item ">
@@ -60,17 +28,7 @@
                     href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.comments')) }}</a>
             </li>
             @endif
-            <!--tickets-->
-            @if(config('settings.project_permissions_view_tickets'))
-            <li class="nav-item ">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_tickets'] ?? '' }}"
-                    id="tabs-menu-tickets" data-toggle="tab" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/tickets"
-                    data-url="{{ url('/tickets') }}?source=ext&ticketresource_type=project&ticketresource_id={{ $project->project_id }}"
-                    href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.tickets')) }}</a>
-            </li>
-            @endif
+            
             <!--notes-->
             @if(config('settings.project_permissions_view_notes'))
             <li class="nav-item ">
@@ -100,15 +58,8 @@
                         data-url="{{ url('/invoices') }}?source=ext&invoiceresource_id={{ $project->project_id }}&invoiceresource_type=project"
                         href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.invoices')) }}</a>
                     @endif
-                    <!--[estimate]-->
-                    @if(auth()->user()->role->role_estimates >= 1)
-                    <a class="dropdown-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_estimates'] ?? '' }}"
-                        data-toggle="tab" data-loading-class="loading-tabs"
-                        data-loading-target="embed-content-container"
-                        data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/estimates"
-                        data-url="{{ url('/estimates') }}?source=ext&estimateresource_id={{ $project->project_id }}&estimateresource_type=project"
-                        href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.estimates')) }}</a>
-                    @endif
+                   
+                    
                     <!--[payments]-->
                     @if(config('settings.project_permissions_view_payments'))
                     <a class="dropdown-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_invoices'] ?? '' }}"
@@ -128,14 +79,7 @@
                         href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.expenses')) }}</a>
                     @endif
                     <!--[timesheets]-->
-                    @if(config('settings.project_permissions_view_timesheets'))
-                    <a class="dropdown-item   js-dynamic-url js-ajax-ux-request {{ $page['tabmenu_timesheets'] ?? '' }}"
-                        data-toggle="tab" data-loading-class="loading-tabs"
-                        data-loading-target="embed-content-container"
-                        data-dynamic-url="{{ _url('/projects') }}/{{ $project->project_id }}/timesheets"
-                        data-url="{{ url('/timesheets') }}?source=ext&timesheetresource_id={{ $project->project_id }}&timesheetresource_type=project"
-                        href="#projects_ajaxtab" role="tab">{{ cleanLang(__('lang.timesheets')) }}</a>
-                    @endif
+                   
                 </div>
             </li>
             @endif

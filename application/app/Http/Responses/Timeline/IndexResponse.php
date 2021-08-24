@@ -33,7 +33,7 @@ class IndexResponse implements Responsable {
 
         //has this call been made from an embedded page/ajax or directly on timeline page
         if (request('source') == 'ext' || request()->ajax()) {
-
+            
             //template and dom - for additional ajax loading
             if (request('action') == 'load') {
                 $template = 'pages/timeline/components/misc/ajax';

@@ -1,3 +1,4 @@
+{{$projects}}
 @foreach($projects as $project)
 <tr id="project_{{ $project->project_id }}">
     @if(config('visibility.projects_col_checkboxes'))

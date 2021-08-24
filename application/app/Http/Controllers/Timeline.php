@@ -73,7 +73,6 @@ class Timeline extends Controller {
             'count' => $events->total(),
             'replace_actions_nav' => '',
         ];
-
         //get clent resource
         if (request('request_source') == 'client' && request()->filled('timelineclient_id')) {
             if ($client = \App\Models\Client::Where('client_id', request('timelineclient_id'))->first()) {
@@ -82,6 +81,7 @@ class Timeline extends Controller {
             }
         }
 
+   // dd( $payload);
         //response
         return new IndexResponse($payload);
     }

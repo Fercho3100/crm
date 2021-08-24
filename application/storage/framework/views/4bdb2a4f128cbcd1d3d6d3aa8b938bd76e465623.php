@@ -1,4 +1,5 @@
 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 <?php if($event->event_show_in_timeline == 'yes'): ?>
 <!--each events item-->
 <div class="sl-item timeline">

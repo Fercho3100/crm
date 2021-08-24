@@ -1,3 +1,5 @@
+<?php echo e($projects); ?>
+
 <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <tr id="project_<?php echo e($project->project_id); ?>">
     <?php if(config('visibility.projects_col_checkboxes')): ?>

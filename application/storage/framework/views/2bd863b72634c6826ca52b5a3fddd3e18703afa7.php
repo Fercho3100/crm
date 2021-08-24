@@ -8,7 +8,7 @@
                     <tr>
                         <th class="clients_col_id">
                             <a class="js-ajax-ux-request js-list-sorting" id="sort_client_id" href="javascript:void(0)"
-                                data-url="<?php echo e(urlResource('/clients?action=sort&orderby=client_id&sortorder=asc')); ?>"><?php echo e(cleanLang(__('lang.id'))); ?><span class="sorting-icons"><i class="ti-arrows-vertical"></i></span></a>
+                                data-url="<?php echo e(urlResource('/clients?action=sort&orderby=client_id&sortorder=asc')); ?>">test<?php echo e(cleanLang(__('lang.id'))); ?><span class="sorting-icons"><i class="ti-arrows-vertical"></i></span></a>
                         </th>
                         <th class="clients_col_company">
                             <a class="js-ajax-ux-request js-list-sorting" id="sort_client_company_name"
@@ -43,6 +43,7 @@
                     </tr>
                 </thead>
                 <tbody id="clients-td-container">
+                    pspd
                     <!--ajax content here-->
                     <?php echo $__env->make('pages.clients.components.table.ajax', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <!--ajax content here-->

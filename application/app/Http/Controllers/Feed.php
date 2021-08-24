@@ -100,7 +100,7 @@ class Feed extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function projects(ProjectRepository $projectrepo) {
-
+    
         //default
         $feed = [];
 

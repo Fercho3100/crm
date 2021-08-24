@@ -69,14 +69,7 @@
     </form>
 </div>
 
-<div class="login-background">
-    <div class="x-left">
-        <img src="{{ url('/') }}/public/images/login-1.png"  class="login-images" />
-    </div>
-    <div class="x-right hidden">
-        <img src="{{ url('/') }}/public/images/login-2.png" alt="404 - Not found" />
-    </div>
-</div>
+
 
 
 @endsection

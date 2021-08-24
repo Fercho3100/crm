@@ -16,39 +16,7 @@
                     data-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/project-details"
                     href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.details'))); ?></a>
             </li>
-            <!--[tasks]-->
-            <?php if(config('settings.project_permissions_view_tasks')): ?>
-            <li class="nav-item">
-                <a class="nav-link tabs-menu-item   js-dynamic-url js-ajax-ux-request" data-toggle="tab"
-                    id="tabs-menu-tasks" data-loading-class="loading-tabs" data-loading-target="embed-content-container"
-                    data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/tasks"
-                    data-url="<?php echo e(url('/tasks')); ?>?source=ext&taskresource_type=project&taskresource_id=<?php echo e($project->project_id); ?>"
-                    href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.tasks'))); ?></a>
-            </li>
-            <?php endif; ?>
-            <!--[milestones]-->
-            <?php if(config('settings.project_permissions_view_milestones')): ?>
-            <li class="nav-item">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_milestones'] ?? ''); ?>"
-                    data-toggle="tab" id="tabs-menu-milestones" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/milestones"
-                    data-url="<?php echo e(url('/milestones')); ?>?source=ext&milestoneresource_type=project&milestoneresource_id=<?php echo e($project->project_id); ?>"
-                    href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.milestones'))); ?></a>
-            </li>
-            <?php endif; ?>
-
-            <!--[files]-->
-            <?php if(config('settings.project_permissions_view_files')): ?>
-            <li class="nav-item">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_files'] ?? ''); ?>"
-                    data-toggle="tab" id="tabs-menu-files" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/files"
-                    data-url="<?php echo e(url('/files')); ?>?source=ext&fileresource_type=project&fileresource_id=<?php echo e($project->project_id); ?>"
-                    href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.files'))); ?></a>
-            </li>
-            <?php endif; ?>
+           
             <!--[comments]-->
             <?php if(config('settings.project_permissions_view_comments')): ?>
             <li class="nav-item ">
@@ -60,17 +28,7 @@
                     href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.comments'))); ?></a>
             </li>
             <?php endif; ?>
-            <!--tickets-->
-            <?php if(config('settings.project_permissions_view_tickets')): ?>
-            <li class="nav-item ">
-                <a class="nav-link  tabs-menu-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_tickets'] ?? ''); ?>"
-                    id="tabs-menu-tickets" data-toggle="tab" data-loading-class="loading-tabs"
-                    data-loading-target="embed-content-container"
-                    data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/tickets"
-                    data-url="<?php echo e(url('/tickets')); ?>?source=ext&ticketresource_type=project&ticketresource_id=<?php echo e($project->project_id); ?>"
-                    href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.tickets'))); ?></a>
-            </li>
-            <?php endif; ?>
+            
             <!--notes-->
             <?php if(config('settings.project_permissions_view_notes')): ?>
             <li class="nav-item ">
@@ -100,15 +58,8 @@
                         data-url="<?php echo e(url('/invoices')); ?>?source=ext&invoiceresource_id=<?php echo e($project->project_id); ?>&invoiceresource_type=project"
                         href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.invoices'))); ?></a>
                     <?php endif; ?>
-                    <!--[estimate]-->
-                    <?php if(auth()->user()->role->role_estimates >= 1): ?>
-                    <a class="dropdown-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_estimates'] ?? ''); ?>"
-                        data-toggle="tab" data-loading-class="loading-tabs"
-                        data-loading-target="embed-content-container"
-                        data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/estimates"
-                        data-url="<?php echo e(url('/estimates')); ?>?source=ext&estimateresource_id=<?php echo e($project->project_id); ?>&estimateresource_type=project"
-                        href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.estimates'))); ?></a>
-                    <?php endif; ?>
+                   
+                    
                     <!--[payments]-->
                     <?php if(config('settings.project_permissions_view_payments')): ?>
                     <a class="dropdown-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_invoices'] ?? ''); ?>"
@@ -128,14 +79,7 @@
                         href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.expenses'))); ?></a>
                     <?php endif; ?>
                     <!--[timesheets]-->
-                    <?php if(config('settings.project_permissions_view_timesheets')): ?>
-                    <a class="dropdown-item   js-dynamic-url js-ajax-ux-request <?php echo e($page['tabmenu_timesheets'] ?? ''); ?>"
-                        data-toggle="tab" data-loading-class="loading-tabs"
-                        data-loading-target="embed-content-container"
-                        data-dynamic-url="<?php echo e(_url('/projects')); ?>/<?php echo e($project->project_id); ?>/timesheets"
-                        data-url="<?php echo e(url('/timesheets')); ?>?source=ext&timesheetresource_id=<?php echo e($project->project_id); ?>&timesheetresource_type=project"
-                        href="#projects_ajaxtab" role="tab"><?php echo e(cleanLang(__('lang.timesheets'))); ?></a>
-                    <?php endif; ?>
+                   
                 </div>
             </li>
             <?php endif; ?>

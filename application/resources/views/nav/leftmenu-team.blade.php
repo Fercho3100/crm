@@ -94,18 +94,8 @@
                                 class=" {{ $page['submenu_invoices'] ?? '' }}">{{ cleanLang(__('lang.invoices')) }}</a>
                         </li>
                         @endif
-                        @if(auth()->user()->role->role_invoices >= 1)
-                        <li class="sidenav-submenu {{ $page['submenu_payments'] ?? '' }}" id="submenu_payments">
-                            <a href="/payments"
-                                class=" {{ $page['submenu_payments'] ?? '' }}">{{ cleanLang(__('lang.payments')) }}</a>
-                        </li>
-                        @endif
-                        @if(auth()->user()->role->role_estimates >= 1)
-                        <li class="sidenav-submenu {{ $page['submenu_estimates'] ?? '' }}" id="submenu_estimates">
-                            <a href="/estimates"
-                                class=" {{ $page['submenu_estimates'] ?? '' }}">{{ cleanLang(__('lang.estimates')) }}</a>
-                        </li>
-                        @endif
+                        
+                        
                         @if(auth()->user()->role->role_items >= 1)
                         <li class="sidenav-submenu {{ $page['submenu_products'] ?? '' }}" id="submenu_products">
                             <a href="/products"

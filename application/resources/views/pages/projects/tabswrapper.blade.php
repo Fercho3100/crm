@@ -9,7 +9,5 @@
 <!--stats panel-->
 
 <!--projects table-->
-<div class="card-embed-fix">
-@include('pages.projects.components.table.wrapper')
-</div>
+
 <!--projects table-->

@@ -98,18 +98,8 @@
                                 class=" <?php echo e($page['submenu_invoices'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.invoices'))); ?></a>
                         </li>
                         <?php endif; ?>
-                        <?php if(auth()->user()->role->role_invoices >= 1): ?>
-                        <li class="sidenav-submenu <?php echo e($page['submenu_payments'] ?? ''); ?>" id="submenu_payments">
-                            <a href="/payments"
-                                class=" <?php echo e($page['submenu_payments'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.payments'))); ?></a>
-                        </li>
-                        <?php endif; ?>
-                        <?php if(auth()->user()->role->role_estimates >= 1): ?>
-                        <li class="sidenav-submenu <?php echo e($page['submenu_estimates'] ?? ''); ?>" id="submenu_estimates">
-                            <a href="/estimates"
-                                class=" <?php echo e($page['submenu_estimates'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.estimates'))); ?></a>
-                        </li>
-                        <?php endif; ?>
+                        
+                        
                         <?php if(auth()->user()->role->role_items >= 1): ?>
                         <li class="sidenav-submenu <?php echo e($page['submenu_products'] ?? ''); ?>" id="submenu_products">
                             <a href="/products"

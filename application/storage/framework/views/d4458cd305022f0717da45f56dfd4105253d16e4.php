@@ -60,14 +60,7 @@
     </form>
 </div>
 
-<div class="login-background">
-    <div class="x-left">
-        <img src="<?php echo e(url('/')); ?>/public/images/login-1.png"  class="login-images" />
-    </div>
-    <div class="x-right hidden">
-        <img src="<?php echo e(url('/')); ?>/public/images/login-2.png" alt="404 - Not found" />
-    </div>
-</div>
+
 <!--signup-->
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.wrapperplain', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /www/wwwroot/fernando.sngcr.com/application/resources/views/pages/authentication/login.blade.php ENDPATH**/ ?>
